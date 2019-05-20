@@ -6,8 +6,6 @@ class Contract {
         fun load()
         fun play()
     }
-
     interface  View{
-
     }
 }
