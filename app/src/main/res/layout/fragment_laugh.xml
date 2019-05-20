@@ -9,31 +9,40 @@
             tools:context=".LaughFragment">
 
 
-        <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal" app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginEnd="16dp"
-                android:layout_marginRight="16dp" app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginLeft="16dp" android:layout_marginStart="16dp" android:layout_marginTop="16dp"
-                app:layout_constraintTop_toTopOf="parent" android:checkedButton="@id/radioButton">
-            <RadioButton
-                    android:text="RadioButton"
+        <com.google.android.material.chip.ChipGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="16dp"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp" android:layout_marginRight="16dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                app:singleSelection="true"
+        >
+            <com.google.android.material.chip.Chip
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/radioButton4" android:layout_weight="1"/>
-            <RadioButton
-                    android:text="RadioButton"
+                    android:layout_height="wrap_content" style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:id="@+id/chip"
+                    android:gravity="center"
+            android:text="Sound 1"/>
+            <com.google.android.material.chip.Chip
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/radioButton3" android:layout_weight="1"/>
-            <RadioButton
-                    android:text="RadioButton"
+                    android:layout_height="wrap_content" style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:id="@+id/chip2"
+                    android:gravity="center"
+            android:text="Sound 2"/>
+            <com.google.android.material.chip.Chip
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/radioButton2" android:layout_weight="1"/>
-            <RadioButton
-                    android:text="RadioButton"
+                    android:layout_height="wrap_content" style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:id="@+id/chip3"
+                    android:gravity="center"
+            android:text="Sound 3"
+            app:chipIcon="@null"/>
+            <com.google.android.material.chip.Chip
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/radioButton" android:layout_weight="1"/>
-        </RadioGroup>
+                    android:layout_height="wrap_content" style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:id="@+id/chip4"
+            android:text="Sound 4"/>
+        </com.google.android.material.chip.ChipGroup>
         <Button
                 android:text="Button"
                 android:layout_width="wrap_content"
