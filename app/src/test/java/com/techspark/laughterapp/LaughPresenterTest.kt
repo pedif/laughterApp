@@ -1,5 +1,6 @@
 package com.techspark.laughterapp
 
+import com.nhaarman.mockitokotlin2.times
 import com.nhaarman.mockitokotlin2.verify
 import org.junit.Test
 
@@ -27,12 +28,9 @@ class LaughPresenterTest {
     @Test
     fun load() {
 
-        laughPresenter.play(1)
+        laughPresenter.play(0)
 
-        verify(view).play(1)
+        verify(view).play(laughPresenter.sounds[0])
     }
-
-    @Test
-    fun play() {
-    }
+    
 }
