@@ -3,9 +3,9 @@ package com.techspark.laughterapp
 class Contract {
 
     interface Presenter{
-        fun load()
-        fun play()
+        fun play(index: Int)
     }
     interface  View{
+        fun play(id: Int)
     }
 }
