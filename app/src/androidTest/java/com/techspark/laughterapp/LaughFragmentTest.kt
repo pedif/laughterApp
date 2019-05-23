@@ -52,6 +52,7 @@ class LaughFragmentTest{
         val fragment = LaughFragment()
         Espresso.onView(ViewMatchers.withId(R.id.button_1)).perform(ViewActions.click())
         assertEquals(fragment.sound, R.raw.test1)
+
 //        assert(fragment.player.isPlaying)
 
     }

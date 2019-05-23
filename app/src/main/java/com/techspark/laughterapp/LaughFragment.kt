@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import com.techspark.laughterapp.databinding.FragmentLaughBinding
 
 
 class LaughFragment : Fragment(),Contract.View {
@@ -29,9 +31,13 @@ class LaughFragment : Fragment(),Contract.View {
 
         presenter = LaughPresenter(this)
 
-        val rootView: View = inflater.inflate(R.layout.fragment_laugh, container, false)
+        val binding: FragmentLaughBinding = DataBindingUtil.inflate(
+            inflater, R.layout.fragment_laugh, container, false)
 
-        return rootView
+        binding.lifecycleOwner = this
+        binding.presenter = presenter
+
+        return binding.root
     }
 
 
