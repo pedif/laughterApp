@@ -32,5 +32,5 @@ class LaughPresenterTest {
 
         verify(view).play(laughPresenter.sounds[0])
     }
-    
+
 }
