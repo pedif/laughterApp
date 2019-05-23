@@ -6,7 +6,7 @@
         >
     <data>
         <variable
-                name="presenter" type="com.techspark.laughterapp.LaughPresenter"
+                name="presenter" type="com.techspark.laughterapp.Contract.Presenter"
                 />
     </data>
 
@@ -28,7 +28,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toTopOf="@+id/button_3"
                 app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toStartOf="@+id/button_2"
-
+                android:onClick="@{()-> presenter.play(0)}"
                 />
 
         <Button
