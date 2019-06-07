@@ -40,9 +40,8 @@ class LaughFragmentTest{
     fun testPlayFunction(){
         val scenario = launchFragmentInContainer<LaughFragment>()
         val fragment = LaughFragment()
-        fragment.play(R.raw.test1)
+        fragment.play(R.raw.snoring)
         assertNotEquals(fragment.sound,null)
-//        assert(fragment.player.isPlaying)
 
     }
 
@@ -51,9 +50,7 @@ class LaughFragmentTest{
         val scenario = launchFragmentInContainer<LaughFragment>()
         val fragment = LaughFragment()
         Espresso.onView(ViewMatchers.withId(R.id.button_1)).perform(ViewActions.click())
-        assertEquals(fragment.sound, R.raw.test1)
-
-//        assert(fragment.player.isPlaying)
+        assertEquals(fragment.sound, R.raw.snoring)
 
     }
 
