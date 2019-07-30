@@ -57,13 +57,10 @@ class MainActivity : AppCompatActivity() {
             URL(getString(R.string.url_privacy))
         )
             .withListener(object : ConsentFormListener() {
-                override fun onConsentFormOpened() {
-                    super.onConsentFormOpened()
-                }
 
                 override fun onConsentFormLoaded() {
                     super.onConsentFormLoaded()
-                    consentForm?.show()
+                    consentForm.show()
                 }
 
                 override fun onConsentFormError(reason: String?) {
