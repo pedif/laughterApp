@@ -8,18 +8,24 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import com.crashlytics.android.Crashlytics
 import com.techspark.laughterapp.databinding.FragmentLaughBinding
 
 
-class LaughFragment : Fragment(),Contract.View {
+class LaughFragment : Fragment(), Contract.View {
 
-    lateinit var  player: MediaPlayer
-    var sound: Int? = null
+    private var player: MediaPlayer? = null
 
     override fun play(id: Int) {
-        sound= id
-//        player = MediaPlayer.create(activity,id)
-//        player.start()
+        try {
+            if (player != null)
+                player?.pause()
+            player = MediaPlayer.create(activity, id).apply {
+                start()
+            }
+        } catch (e: Exception) {
+            Crashlytics.logException(e)
+        }
     }
 
     lateinit var presenter: Contract.Presenter
@@ -29,10 +35,11 @@ class LaughFragment : Fragment(),Contract.View {
         savedInstanceState: Bundle?
     ): View? {
 
-        presenter = LaughPresenter(this,context!!)
+        presenter = LaughPresenter(this, context!!)
 
         val binding: FragmentLaughBinding = DataBindingUtil.inflate(
-            inflater, R.layout.fragment_laugh, container, false)
+            inflater, R.layout.fragment_laugh, container, false
+        )
 
         binding.lifecycleOwner = this
         binding.presenter = presenter
@@ -40,6 +47,13 @@ class LaughFragment : Fragment(),Contract.View {
         return binding.root
     }
 
+    override fun onStop() {
+        super.onStop()
+        if (player != null) {
+            player?.release()
+            player = null
+        }
+    }
 
 
 }
