@@ -17,9 +17,10 @@
             android:orientation="vertical"
             >
 
-
-        <Button
-                android:text="&#128513;"
+        <ImageButton
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_applause"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:id="@+id/button_1"
@@ -31,8 +32,10 @@
                 android:onClick="@{()-> presenter.play(0)}"
                 />
 
-        <Button
-                android:text="&#128514;"
+        <ImageButton
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_baby"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:id="@+id/button_2"
@@ -45,8 +48,10 @@
                 android:onClick="@{()-> presenter.play(1)}"
                 />
 
-        <Button
-                android:text="&#128522;"
+        <ImageButton
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_demonic"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:id="@+id/button_3"
@@ -58,8 +63,10 @@
                 android:onClick="@{()-> presenter.play(2)}"
                 />
 
-        <Button
-                android:text="&#128517;"
+        <ImageButton
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_rolling_on_the_floor_laughing"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:id="@+id/button_4"
@@ -71,8 +78,10 @@
                 android:onClick="@{()-> presenter.play(3)}"
                 />
 
-        <Button
-                android:text="&#128518;"
+        <ImageButton
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_lol"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:id="@+id/button_5"
@@ -84,8 +93,10 @@
                 android:onClick="@{()-> presenter.play(4)}"
                 />
 
-        <Button
-                android:text="&#128520;"
+        <ImageButton
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_flushed_face"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:id="@+id/button_6"
@@ -97,8 +108,10 @@
                 android:onClick="@{()-> presenter.play(5)}"
                 />
 
-        <Button
-                android:text="&#128521;"
+        <ImageButton
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_rolling_on_the_floor_laughing"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:id="@+id/button_7"
@@ -110,8 +123,10 @@
                 android:onClick="@{()-> presenter.play(6)}"
                 />
 
-        <Button
-                android:text="&#128522;"
+        <ImageButton
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_silly"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:id="@+id/button_8"
@@ -123,8 +138,10 @@
                 android:onClick="@{()-> presenter.play(7)}"
                 />
 
-        <Button
-                android:text="&#128532;"
+        <ImageButton
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_snoring"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:id="@+id/button_9"
@@ -136,8 +153,10 @@
                 android:onClick="@{()-> presenter.play(8)}"
                 />
 
-        <Button
-                android:text="&#128534;"
+        <ImageButton
+                app:srcCompat="@drawable/ic_ghost"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:id="@+id/button_10"
@@ -148,5 +167,6 @@
                 android:textSize="120sp"
                 android:onClick="@{()-> presenter.play(9)}"
                 />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
