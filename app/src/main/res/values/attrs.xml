@@ -2,4 +2,7 @@
 <resources>
     <string name="ad_id">ca-app-pub-9500612318891630~8802685221</string>
     <string name="ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="ad_publisher_id">pub-9500612318891630</string>
+    <string name="url_privacy">https://techsparkdomain.blogspot.com/p/privacy-policy-pedif-built-whateats-app.html
+    </string>
 </resources>
