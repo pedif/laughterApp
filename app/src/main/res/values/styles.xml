@@ -6,9 +6,10 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="buttonStyle">@style/emojiButton</item>
+        <item name="imageButtonStyle">@style/emojiButton</item>
     </style>
-    <style name="emojiButton" parent="Widget.AppCompat.Button">
-        <item name="android:background">@drawable/bg_button</item>
+    <style name="emojiButton" parent="Widget.AppCompat.ImageButton">
+        <item name="android:background">@null</item>
+        <item name="android:padding">16dp</item>
     </style>
 </resources>
