@@ -29,7 +29,7 @@ class LaughFragment : Fragment(),Contract.View {
         savedInstanceState: Bundle?
     ): View? {
 
-        presenter = LaughPresenter(this)
+        presenter = LaughPresenter(this,context!!)
 
         val binding: FragmentLaughBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_laugh, container, false)

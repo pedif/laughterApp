@@ -2,12 +2,9 @@ package com.techspark.laughterapp
 
 import androidx.fragment.app.testing.launchFragmentInContainer
 import androidx.test.espresso.Espresso
-import androidx.test.espresso.ViewAction
-import androidx.test.espresso.action.EspressoKey
 import androidx.test.espresso.action.ViewActions
 import androidx.test.espresso.assertion.ViewAssertions
 import androidx.test.espresso.matcher.ViewMatchers
-import androidx.test.internal.runner.junit4.AndroidJUnit4Builder
 import androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner
 import org.junit.Assert.*
 import org.junit.Test
@@ -40,7 +37,7 @@ class LaughFragmentTest{
     fun testPlayFunction(){
         val scenario = launchFragmentInContainer<LaughFragment>()
         val fragment = LaughFragment()
-        fragment.play(R.raw.snoring)
+        fragment.play(R.raw.sound_snoring)
         assertNotEquals(fragment.sound,null)
 
     }
@@ -50,7 +47,7 @@ class LaughFragmentTest{
         val scenario = launchFragmentInContainer<LaughFragment>()
         val fragment = LaughFragment()
         Espresso.onView(ViewMatchers.withId(R.id.button_1)).perform(ViewActions.click())
-        assertEquals(fragment.sound, R.raw.snoring)
+        assertEquals(fragment.sound, R.raw.sound_snoring)
 
     }
 
